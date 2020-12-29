@@ -1,0 +1,13 @@
+version: '2'
+
+services:
+    nginx:
+        build: ./nginx
+        container_name: ms_nginx
+        links:
+            - petstore
+            - users
+        ports:
+            - "80:80"
+
+   
